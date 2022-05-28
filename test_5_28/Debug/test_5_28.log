@@ -1,0 +1,3 @@
+﻿  test.c
+C:\Users\ZZF\Desktop\鹏哥\start for  C\test_1\test_5_28\test.c(23,26): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+  test_5_28.vcxproj -> C:\Users\ZZF\Desktop\鹏哥\start for  C\test_1\test_5_28\Debug\test_5_28.exe
