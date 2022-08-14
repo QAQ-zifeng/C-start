@@ -88,9 +88,34 @@
 //}
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Stu
+{
+	char name[20];
+	int age;
+};
+
+int cmp_stu_by_name(const void* e1, const void* e2)
+{
+	return strcmp(((struct Stu*)e1)->name, ((struct Stu*)e2)->name);
+}
+
+int cmp_stu_by_age(const void* e1, const void* e2)
+{
+	return ((struct Stu*)e1)->age - ((struct Stu*)e2)->age;
+}
+void test()
+{
+	struct Stu s[] = { {"zhangsan" ,14},{"lisi",16},{"wangwu",15} };
+	int sz = sizeof(s) / sizeof(s[0]);
+	//qsort(s, sz, sizeof(s[0]), cmp_stu_by_name);
+	qsort(s, sz, sizeof(s[0]), cmp_stu_by_age);
+}
 
 int main()
 {
-
+	test();
 	return 0;
 }
