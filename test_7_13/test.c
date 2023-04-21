@@ -151,4 +151,78 @@
 //	return 0;
 //}
 
+////模拟实现atoi
 
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<assert.h>
+//#include<ctype.h>
+//#include<limits.h>
+//
+//enum s
+//{
+//	VALID,//0
+//	INVALID//1
+//}sta = INVALID;//默认非法
+//int my_atoi(const char* str)
+//{
+//	int flag = 1;
+//	assert(str);
+//	if (*str == '\0')
+//		return 0;
+//	//跳过空白字符
+//	while (isspace(*str))
+//	{
+//		str++;
+//	}
+//	//+-
+//	if (*str == '+')
+//	{
+//		flag = 1;
+//		str++;
+//	}
+//	else if (*str == '-')
+//	{
+//		flag = -1;
+//		str++;
+//	}
+//	long long ret = 0;
+//	while (*str)
+//	{
+//		if (isdigit(*str))
+//		{
+//			ret = ret * 10 + flag * (*str - '0');//
+//			if (ret > INT_MAX || ret < INT_MIN)//判断越界
+//			{
+//				return 0;
+//			}
+//		}
+//		else
+//		{
+//			return (int)ret;
+//		}
+//		str++;
+//	}
+//	if (*str == '\0')
+//	{
+//		sta = VALID;
+//	}
+//	return (int)ret;
+//}
+//
+//int main()
+//{
+//	char arr[200] = "123456";
+//	int ret = my_atoi(arr);
+//	if (sta == INVALID)//非法
+//	{
+//		printf("非法返回:");
+//	}
+//	else if (sta == VALID)//合法
+//	{
+//		printf("合法转换:");
+//	}
+//	printf("%d\n", ret);
+//
+//	return 0;
+//}
