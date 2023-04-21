@@ -23,15 +23,15 @@ void DisplayBoard(char board[ROWS][COLS], int row, int col)
 	int j = 0;
 	printf("------и╗ювсно╥------\n");
 
-	for (j = 0; j < col; j++)
+	for (j = 0; j <= col; j++)
 	{
 		printf("%d ", j);
 	}
 	printf("\n");
-	for (i = 1; i < row; i++)
+	for (i = 1; i <= row; i++)
 	{
 		printf("%d ", i);
-		for (j = 1; j < col; j++)
+		for (j = 1; j <= col; j++)
 		{
 			printf("%c ", board[i][j]);
 		}
