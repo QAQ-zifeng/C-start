@@ -2,6 +2,8 @@
 
 #include<assert.h>
 #include <stdio.h>
+#include <stdlib.h>
+
 
 typedef int SLTDateType;
 typedef struct SListNode
@@ -35,9 +37,16 @@ SListNode* SListFind(SListNode* plist, SLTDateType x);
 // 分析思考为什么不在pos位置之前插入？
 void SListInsertAfter(SListNode* pos, SLTDateType x);
 
+//Add:在pos位置之前插入
+void SListInsertBefore(SListNode** pplist, SListNode* pos, SLTDateType x);
+
 // 单链表删除pos位置之后的值
 // 分析思考为什么不删除pos位置？
 void SListEraseAfter(SListNode* pos);
 
+// 单链表删除pos位置的值
+void SListErase(SListNode** pplist, SListNode* pos);
+
+
 // 单链表的销毁
-void SListDestroy(SListNode* plist);
+void SListDestroy(SListNode** plist);
